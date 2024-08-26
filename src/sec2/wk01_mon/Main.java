@@ -1,4 +1,4 @@
-package sec1.wk01_mon;
+package sec2.wk01_mon;
 
 public class Main {
     public static void main(String [] args){
