@@ -18,7 +18,7 @@ public class Coffee {
         sizeInOunces = size;
         syrupCount = 0;
 
-        if(size >= 12){
+        if(sizeInOunces >= 12){
             syrups = new String[MAX_SYRUP];
         } else{
             syrups = new String[MIN_SYRUP];
@@ -48,7 +48,7 @@ public class Coffee {
         }else{
             StringBuilder sb = new StringBuilder();
             for(int i = 0; i < syrupCount; i++){
-                sb.append(syrups[i] + ",");
+                sb.append(syrups[i]).append(",");
             }
             return sb.toString();
         }
