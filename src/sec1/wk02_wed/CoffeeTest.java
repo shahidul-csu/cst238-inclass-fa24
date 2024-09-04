@@ -1,4 +1,4 @@
-package sec2.wk02_wed;
+package sec1.wk02_wed;
 
 public class CoffeeTest {
     public static void main(String[] args){
