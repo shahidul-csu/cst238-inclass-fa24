@@ -1,4 +1,4 @@
-package sec1.wk02_wed;
+package sec2.wk02_wed;
 
 public class Coffee {
     private int sizeInOunces;
@@ -8,17 +8,16 @@ public class Coffee {
     public static final int MAX_SYRUP = 5;
 
     public Coffee(){
-        System.out.println("Constructor 1 called");
+        System.out.println("Constructor 1 called!");
         sizeInOunces = 12;
-        syrupCount = 0;
         syrups = new String[MIN_SYRUP];
-    }
-    public Coffee(int size){
-        System.out.println("Constructor 2 called");
-        sizeInOunces = size;
         syrupCount = 0;
+    }
 
-        if(sizeInOunces >= 12){
+    public Coffee(int size){
+        System.out.println("Constructor 2 called!");
+        sizeInOunces = size;
+        if(sizeInOunces >= 16){
             syrups = new String[MAX_SYRUP];
         } else{
             syrups = new String[MIN_SYRUP];
@@ -28,14 +27,14 @@ public class Coffee {
     public void addSyrup(String flavor){
         if(syrupCount < syrups.length){
             syrups[syrupCount++] = flavor;
-        } else{
-            System.out.println("Too Many Syrup!!!");
+        }else {
+            System.out.println("Too many syrups!");
         }
     }
 
-    public void printSyrups(){
+    public void printSyrup(){
         if(syrupCount == 0){
-            System.out.println("No syrups added!");
+            System.out.println("No syrup added!");
         }
         for(int i = 0; i < syrupCount; i++){
             System.out.println(syrups[i]);
@@ -44,13 +43,14 @@ public class Coffee {
 
     public String toString(){
         if(syrupCount == 0){
-            return "No Syrup Added";
+            return "No syrup added!";
         }else{
-            StringBuffer sb = new StringBuffer();
+            StringBuilder sb = new StringBuilder();
             for(int i = 0; i < syrupCount; i++){
-                sb.append(syrups[i] + ",");
+                sb.append(syrups[i]).append(",");
             }
             return sb.toString();
+
         }
     }
 }
