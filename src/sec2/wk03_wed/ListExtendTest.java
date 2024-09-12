@@ -1,4 +1,4 @@
-package sec1.wk03_wed;
+package sec2.wk03_wed;
 
 public class ListExtendTest {
     public static void main(String[] args){
@@ -7,12 +7,12 @@ public class ListExtendTest {
         pets.append("Dog");
         pets.append("Cat");
         System.out.println(pets);
-        pets.append("Fish");
-        pets.append("Turtle");
+        pets.append("Snake");
+        pets.append("Bird");
         System.out.println(pets);
-        pets.insert("Snake", 1);
+        pets.insert("Fish", 1);
         System.out.println(pets);
-        pets.delete(2);
+        pets.delete(0);
         System.out.println(pets);
 //        System.out.println(pets.get(1));
 //        System.out.println(pets.get(7));

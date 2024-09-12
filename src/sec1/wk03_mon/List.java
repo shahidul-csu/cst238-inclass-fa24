@@ -21,7 +21,7 @@ public class List {
         } else if (index < 0 || index >= count) {
             System.out.println("Invalid Position");
         } else{
-            for(int i = index; i < count; i++){
+            for(int i = index; i < count - 1; i++){
                 data[i] = data[i+1];
             }
             count--;

@@ -1,9 +1,9 @@
-package sec1.wk03_wed;
+package sec2.wk03_wed;
 
 public class ListExtend {
     private String[] data;
     private int count;
-    public static final int DEFAULT_CAPACITY = 20;
+    public static final int DEFAULT_CAPACITY = 10;
 
     public ListExtend(){
         count = 0;
@@ -23,7 +23,6 @@ public class ListExtend {
             for(int i = 0; i < count; i++){
                 sb.append(data[i].charAt(0)).append(",");
             }
-
             return sb.toString();
         }
     }
@@ -32,14 +31,14 @@ public class ListExtend {
         int chCount = 0;
         for(int i = 0; i < count; i++){
             chCount += data[i].length();
-            System.out.println(data[i].toUpperCase() + ", len: " + data[i].length());
-            System.out.println(data.length);
+//            System.out.println(data[i] + ", len: " + data[i].length());
+//            System.out.println(data.length);
         }
         return chCount;
     }
 
     public String get(int index){
-        if(index < 0 || index >= count){
+        if (index < 0 || index >= count){
             return null;
         } else{
             return data[index];
@@ -48,12 +47,12 @@ public class ListExtend {
 
     public void delete(int index){
         if(isEmpty()){
-            System.out.println("List Empty");
-        } else if (index < 0 || index >= count) {
-            System.out.println("Invalid Position");
+            System.out.println("Empty List");
+        } else if(index < 0 || index >= count){
+            System.out.println("Invalid Index");
         } else{
-            for(int i = index; i < count - 1; i++){
-                data[i] = data[i+1];
+            for (int i = index; i < count - 1; i++) {
+                data[i] = data[i + 1];
             }
             data[count] = null;
             count--;
@@ -62,12 +61,12 @@ public class ListExtend {
 
     public void insert(String item, int index){
         if(count == data.length){
-            System.out.println("List is full");
-        } else if (index < 0 || index > count) {
-            System.out.println("Invalid index1");
+            System.out.println("List is full!");
+        } else if (index < 0 || index > count){
+            System.out.println("Invalid Index");
         } else{
             for(int i = count; i > index; i--){
-                data[i] = data[i-1];
+                data[i] = data[i - 1];
             }
             data[index] = item;
             count++;
@@ -76,7 +75,7 @@ public class ListExtend {
 
     public void append(String item){
         if(count == data.length){
-            System.out.println("List is full");
+            System.out.println("List is full!");
         } else{
             data[count++] = item;
         }
@@ -88,14 +87,12 @@ public class ListExtend {
 
     public String toString(){
         if(isEmpty()){
-            return "empty list";
-        } else{
-            StringBuilder sb = new StringBuilder();
-            for(int i = 0; i < count; i++){
-                sb.append(data[i] + " ");
-            }
-            return sb.toString();
+            return "Empty List";
         }
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < count; i++){
+            sb.append(data[i] + " ");
+        }
+        return sb.toString();
     }
 }
-
