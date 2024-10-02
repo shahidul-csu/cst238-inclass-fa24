@@ -11,8 +11,8 @@ public class SearchFun {
         System.out.println("Is data sorted? " + isSorted(data, count));
         print(data, count);
 //        Arrays.sort(data, 0, count);
-        System.out.println("Is data sorted? " + isSorted(data, count));
-        print(data, count);
+//        System.out.println("Is data sorted? " + isSorted(data, count));
+//        print(data, count);
         boolean isSorted = isSorted(data, count);
 
         int search = 3;
