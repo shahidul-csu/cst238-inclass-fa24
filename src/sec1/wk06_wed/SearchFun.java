@@ -15,7 +15,7 @@ public class SearchFun {
 //        print(data, count);
         boolean isSorted = isSorted(data, count);
 
-        int search = 3;
+        int search = 6;
         if(isSorted){
             System.out.println("Using binary search");
             System.out.println(search + " location: " + binarySearch(data, count, search));
