@@ -16,5 +16,9 @@ public class Main {
         l.insert(1, 50);
         System.out.println(l);
         System.out.println(l.sum());
+
+        Queue q = new Queue();
+        System.out.println(q.isEmpty());
+        System.out.println(q.isFull());
     }
 }
