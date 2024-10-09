@@ -1,3 +1,6 @@
+/*This class is not a complete implementation of Queue.
+* It is to test a few features as a review topic*/
+
 package sec1.wk07_wed;
 
 public class Queue {
