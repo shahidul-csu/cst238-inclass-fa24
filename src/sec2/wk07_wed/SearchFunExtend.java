@@ -28,7 +28,18 @@ public class SearchFunExtend {
         while(low <= high){
             int mid = (low + high) / 2;
             if(a[mid] == value){
-                return mid;
+                if(mid == 0 || a[mid - 1] != value){
+                    return mid;
+                }
+                high = mid - 1;
+//                int i = mid - 1;
+//                for(; i >= 0; i--){
+//                    if(a[i] != value){
+//                        break;
+//                    }
+//                }
+//                return i + 1;
+                //return mid;
             } else if(value < a[mid]){
                 //Left
                 high = mid - 1;
