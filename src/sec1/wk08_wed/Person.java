@@ -15,7 +15,7 @@ public class Person implements Comparable<Person> {
     // return positive integer if first item is larger
     // return 0 if they are same,
     public int compareTo(Person p){
-        return this.getName().compareTo(p.getName());
+        return this.name.compareTo(p.name);
 //        return this.getHeight() - p.getHeight();
 //        return this.getAge() - p.getAge();
 //        return p.getAge() - this.getAge();
