@@ -1,4 +1,4 @@
-package sec2.wk10_mon;
+package sec1.wk10_mon;
 
 public class Recursion {
     public static void  main(String[] args){
