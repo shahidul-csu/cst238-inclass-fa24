@@ -1,4 +1,4 @@
-package sec1.wk12_mon;
+package sec1.wk12_wed;
 
 public class LinkedList {
     private Node first;

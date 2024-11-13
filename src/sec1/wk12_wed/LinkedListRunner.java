@@ -1,4 +1,4 @@
-package sec1.wk12_mon;
+package sec1.wk12_wed;
 
 public class LinkedListRunner {
     public static void main(String[] args){
