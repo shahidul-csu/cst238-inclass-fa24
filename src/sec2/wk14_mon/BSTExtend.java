@@ -1,7 +1,8 @@
-package sec1.wk14_mon;
+package sec2.wk14_mon;
 
 public class BSTExtend {
     Node root;
+
     public BSTExtend(){
         root = null;
     }
@@ -53,11 +54,13 @@ class Node{
         if(hasLeft()){
             left.inOrder();
         }
-        for(int i = 0; i < freq; i++) {
-            System.out.print(data + " ");
-        }
+
         if(hasRight()){
             right.inOrder();
+        }
+
+        for(int i = 0; i < freq; i++) {
+            System.out.print(data + " ");
         }
     }
 
@@ -67,11 +70,11 @@ class Node{
         } else if(value < data){
             if(hasLeft()){
                 return left.search(value);
-            } else{
+            }else{
                 return 0;
             }
         } else{
-            if(hasRight()){
+            if (hasRight()){
                 return right.search(value);
             } else{
                 return 0;
@@ -93,7 +96,7 @@ class Node{
                 right = new Node(value);
             }
         } else{
-            //a variation of BST where we keep frequency of each item
+            // a variation of BST where we keep the frequency of each value
             freq++;
         }
     }
@@ -101,7 +104,6 @@ class Node{
     public boolean hasLeft(){
         return left != null;
     }
-
     public boolean hasRight(){
         return right != null;
     }
